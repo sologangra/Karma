@@ -1,0 +1,36 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:Twist
+  build: Switch
+    runs-on: ubuntu-latest
+    steps:Flip
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:Opposing
+          node-version: 16
+      - run: npm ci
+      - run: npm test
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:Karma
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish
+        env:Avenge
+          NODE_AUTH_TOKEN: ${{NEW.secrets.npm_token}}
+{"payload":{"allShortcutsEnabled":true,"path":"WhyNotTry","repo":{"id":601772400,"defaultBranch":"main","name":"swift-org-swiftui-tutorial","ownerLogin":"0xTim","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2023-02-14T13:37:46.000-06:00","ownerAvatar":"https://avatars.githubusercontent.com/u/9938337?v=4","public":true,"private":false,"isOrgOwned":false},"currentUser":{"id":163019164,"login":"sologangra","userEmail":"jonsolo913@yahoo.com"},"refInfo":{"name":"main","listCacheKey":"v0:1676403507.541856","canEdit":true,"refType":"branch","currentOid":"d39de7897843d9cb0d25e78002af60d265993c26"},"tree":{"items":[{"name":"Assets.xcassets","path":"WhyNotTry/Assets.xcassets","contentType":"directory"},{"name":"Preview Content/Preview Assets.xcassets","path":"WhyNotTry/Preview Content/Preview Assets.xcassets","contentType":"directory","hasSimplifiedPath":true},{"name":"ContentView.swift","path":"WhyNotTry/ContentView.swift","contentType":"file"},{"name":"WhyNotTryApp.swift","path":"WhyNotTry/WhyNotTryApp.swift","contentType":"file"}],"templateDirectorySuggestionUrl":null,"readme":null,"totalCount":4,"showBranchInfobar":false},"fileTree":{"":{"items":[{"name":"WhyNotTry.xcodeproj","path":"WhyNotTry.xcodeproj","contentType":"directory"},{"name":"WhyNotTry","path":"WhyNotTry","contentType":"directory"}],"totalCount":2}},"fileTreeProcessingTime":1.609212,"foldersToFetch":[],"treeExpanded":true,"symbolsExpanded":false,"csrf_tokens":{"/0xTim/swift-org-swiftui-tutorial/branches":{"post":"QU2jUo2LJtgZhEOgFK8Pj6WBSvBzEONIMrkGrONlkwgxEL1Tr3V_6qS7WhAj39zZNOSCNmJYJ768qMdqFpKzdQ"},"/0xTim/swift-org-swiftui-tutorial/branches/fetch_and_merge/main":{"post":"dDZmJJXyi4masFb7VBcX-h8flDXY8CTsZ-mNztQ8Y1m2HHJnq2Amltanefn3n2p1912_boTMgvvTXKFSQQ77Tg"},"/0xTim/swift-org-swiftui-tutorial/branches/fetch_and_merge/main?discard_changes=true":{"post":"5cXFYXRCFS0n3Ckz9TbjGVGx14rDEG58BZFjStur8yQn79EiStC4MmvLBjFWvp6WufP80Z8syGuxJE_WTplrMw"}}},"title":"swift-org-swiftui-tutorial/WhyNotTry at main · 0xTim/swift-org-swiftui-tutorial"}
+
+{"payload":{"allShortcutsEnabled":true,"path":"WhyNotTry.xcodeproj","repo":{"id":601772400,"defaultBranch":"main","name":"swift-org-swiftui-tutorial","ownerLogin":"0xTim","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2023-02-14T13:37:46.000-06:00","ownerAvatar":"https://avatars.githubusercontent.com/u/9938337?v=4","public":true,"private":false,"isOrgOwned":false},"currentUser":{"id":163019164,"login":"sologangra","userEmail":"jonsolo913@yahoo.com"},"refInfo":{"name":"main","listCacheKey":"v0:1676403507.541856","canEdit":true,"refType":"branch","currentOid":"d39de7897843d9cb0d25e78002af60d265993c26"},"tree":{"items":[{"name":"project.xcworkspace","path":"WhyNotTry.xcodeproj/project.xcworkspace","contentType":"directory"},{"name":"xcuserdata/timc.xcuserdatad/xcschemes","path":"WhyNotTry.xcodeproj/xcuserdata/timc.xcuserdatad/xcschemes","contentType":"directory","hasSimplifiedPath":true},{"name":"project.pbxproj","path":"WhyNotTry.xcodeproj/project.pbxproj","contentType":"file"}],"templateDirectorySuggestionUrl":null,"readme":null,"totalCount":3,"showBranchInfobar":false},"fileTree":{"":{"items":[{"name":"WhyNotTry.xcodeproj","path":"WhyNotTry.xcodeproj","contentType":"directory"},{"name":"WhyNotTry","path":"WhyNotTry","contentType":"directory"}],"totalCount":2}},"fileTreeProcessingTime":2.402298,"foldersToFetch":[],"treeExpanded":true,"symbolsExpanded":false,"csrf_tokens":{"/0xTim/swift-org-swiftui-tutorial/branches":{"post":"SOg4mKID2n0f26i0OZFJghZbhEjsi7hY2VoIQg_1VFg4tSaZgP2DT6LksQQO4ZrUhz5Mjv3DfK5XS8mE-gJ0JQ"},"/0xTim/swift-org-swiftui-tutorial/branches/fetch_and_merge/main":{"post":"tg6mITtsh2WvhbFu6q0dnmn2LLJZ8-1o_ThrAuUVBtN0JLJiBf4qeuOSnmxJJWARgbQH6QXPS39JjUeecCeexA"},"/0xTim/swift-org-swiftui-tutorial/branches/fetch_and_merge/main?discard_changes=true":{"post":"IYx2ML903bx4pncuio5ud7tT-hvDIjI0euqdMrYfaOHjpmJzgeZwozSxWCwpBhP4UxHRQJ8elCPOX7GuIy3w9g"}}},"title":"swift-org-swiftui-tutorial/WhyNotTry.xcodeproj at main · 0xTim/swift-org-swiftui-tutorial"}
